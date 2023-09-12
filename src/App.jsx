@@ -11,7 +11,7 @@ const App = () => {
         'MqlR9iNlfB7Kt17txIGUk9xf1EVzlBOuyGNOcT79GqXNGwhM2QLKaG9DatFvNwn0',
       Accept: 'application/json',
     },
-    body: '{"collection":"kittens","database":"kittens","dataSource":"Cluster0","projection":{"_id":0,"id":1,"name":1,"image":1}}',
+    body: '{"collection":"kittens","database":"kittens","dataSource":"Cluster0","projection":{"_id":0,"id":1,"name":1,"image":1, "image2":0, "description":0}}',
   };
   const getMovies = async () => {
     try {
@@ -23,8 +23,6 @@ const App = () => {
       setData(json.movies);
     } catch (error) {
       console.error(error);
-    } finally {
-      setLoading(false);
     }
   };
 
